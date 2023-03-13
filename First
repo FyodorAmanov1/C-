@@ -1,0 +1,46 @@
+#include <iostream>
+
+using namespace std;
+
+/*int main()
+{
+    int myNum = 15;
+    cout<<myNum;
+    cout<<"\n"; // New line
+    double myDouble = 6.506;
+    cout<<myDouble;
+    cout<<"\n"; // New line
+    char Letter = 'A';
+    cout<<Letter;
+    cout<<"I have a number, n = " << myDouble;
+    cout<<"\n"; // New line
+    int newNum = 1000;
+    int Sum1 = myNum + newNum;
+    cout<<Sum1;
+    return 0;
+} */
+
+/*int main() {
+    const int degreesInACircle = 360;
+    const int minutesInHour = 60;
+    int degreePerMinute = degreesInACircle/minutesInHour;
+    cout<< "Each minute minute hand of watchs moves by " << degreePerMinute << " degrees .\n";
+    return 0;
+}*/
+
+/* int main() {
+    int x,y,sum;
+    cout<<"Type any number !\n";
+    cin>>x;
+    cout<<"Just another number for magic to happen !\n";
+    cin>>y;
+    sum = x +y;
+    cout<<"Voilla, there is a sum of two " << sum;
+    return 0;
+} */
+
+int main() {
+    int num = 'B';
+    cout<<num;
+    return 0;
+}
