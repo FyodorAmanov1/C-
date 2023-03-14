@@ -1,0 +1,56 @@
+#include <iostream>
+#include <cmath>
+using namespace std;
+
+/* main() {
+    int b = 1, c = 2, d = 3, e = 4;
+    cout << "a\t" << "a^2\t" << "a^3\n";
+    cout << b << "\t"<< pow(b,2) << "\t" << pow(b,3) << "\n";
+    cout << c << "\t"<< pow(c,2) << "\t" << pow(c,3) << "\n";
+    cout << d << "\t"<< pow(d,2) << "\t" << pow(d,3) << "\n";
+    cout << e << "\t"<< pow(e,2) << "\t" << pow(e,3) << "\n";
+    return 0;
+}*/
+
+/*int main() {
+    int s = 0;
+    for (int i = 0; i < 10; i++) {
+        s += i;
+    }
+    cout << s <<"\n";
+    
+    cout << (9.5*4.7 - 2.5*3)/(45.5 - 3.5);
+    return 0;
+} */
+
+/*int main() {
+    float r = 5.5, C, A;
+    C = 2*M_PI*r;
+    A = M_PI*pow(r,2);
+    cout << C << "\n";
+    cout << A;
+    return 0;
+} */
+
+/*int main() {
+    float Vm, m, h, k = 14, t = 45*60 + 30;
+    m = k/1.6;
+    h = t/3600;
+    Vm = m/h;
+    cout << Vm;
+    return 0;
+}*/
+
+int main() {
+    float pi, sum = 0;
+    for (int i = 1; i <= 13; i += 2){
+        if (i%4 == 1) {sum += 1/i;} else {sum -= 1/i;}
+        
+    }
+    pi = sum;
+    cout << pi;
+    return 0;
+    
+}
+
+//some interesting stuff with loops !
