@@ -1,0 +1,114 @@
+#include <iostream>
+using namespace std;
+
+int main () {
+    float m, n, z;
+    cin >> m;
+    cin >> n;
+    z = m * n ;
+    cout << "Product: " << m << " * " << n << " = " << z;
+    return 0;
+}
+
+
+
+#include <iostream>
+#include <cmath>
+using namespace std;
+
+int main () {
+    float n = 250.0, g = 11.0, nt = round(n/g);
+    cout << nt;
+    return 0;
+}
+
+
+#include <iostream>
+#include <cmath>
+using namespace std;
+
+int main () {
+    float n = 25e-3;
+    double g = 15e-4;
+    cout << n << "\n" << g ;
+    return 0;
+}
+
+#include <iostream>
+#include <cmath>
+using namespace std;
+
+int main () {
+    int n, o, t, h, sum;
+    cin >> n;
+    o = n%10;
+    t = ((n%100) - o)/10;
+    h = (n - n%100)/100;
+    sum = h + t + o;
+    cout << o << "\n";
+    cout << t << "\n";
+    cout << h << "\n";
+    cout << "The sum of the digits: " << sum;
+    return 0;
+}
+
+
+Sum of all digits:
+#include <iostream>
+#include <cmath>
+using namespace std;
+
+int main () {
+    int n, sum;
+    cin >> n;
+    while (n > 0) {
+        sum += n %10;
+        n /= 10;
+    }
+    cout << sum;
+    return 0;
+}
+
+#include <iostream>
+#include <cmath>
+using namespace std;
+
+int main () {
+    int n, s;
+    cin >> n >> s;
+    if (n < 50 or n < s) {
+        cout << "True";
+    }
+    else {
+        cout << "False";
+    }
+    return 0;
+}
+
+With Q!
+#include <iostream>
+#include <cmath>
+using namespace std;
+
+int main () {
+    float n, nTot = 0, sum = 0, r;
+    int m;
+    cin >> n >> m >> r;
+    for ( int i = 0; i < m + 1; i++) {
+        nTot += n * (r/100/12);
+        n = n + nTot;
+    }
+    cout << n;
+    return 0;
+}
+
+#include <iostream>
+#include <cmath>
+using namespace std;
+
+int main () {
+    float s, area;
+    cin >> s;
+    area = 3 * sqrt(3) / 2 * pow(s, 2);
+    cout << area;
+}
