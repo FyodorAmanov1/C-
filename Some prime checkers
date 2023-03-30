@@ -1,0 +1,54 @@
+//Some really simple program to find prime, with the terrible complexity
+
+
+#include <iostream>
+using namespace std;
+
+int main() {
+    int n;
+    cin >> n;
+    for (int i = 2; i <= n; i++){
+        if (n%i == 0 && i != n){
+            cout << "Your number is not prime!";
+            break;
+        }
+        if (i == n){
+            cout << "Your number is prime ! Congrats :)";
+        }
+        else { continue; }
+    }
+    
+}
+
+
+//Good finding prime code, still not finished :(
+
+#include <iostream>
+using namespace std;
+
+int main() {
+    int n;
+    int removedNumbers [n] = {}; 
+    cin >> n;
+    for (int i = 2; i < n; i++) {
+        for (int k = 0; i < n; k++) {
+            
+            
+            if (n%i != 0){
+                removedNumbers[k] = i;
+                continue;
+            }
+            
+            
+        }
+        if (n%i == 0) {
+            cout << "The number is not prime !";
+            break;
+        }
+        else {
+            removedNumbers[i] = i;
+            continue;
+        }
+    }
+    
+}
