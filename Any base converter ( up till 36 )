@@ -1,0 +1,139 @@
+#include <iostream>
+#include <cmath>
+#include <string>
+using namespace std;
+
+int main()
+{
+    int n, syst, c, t, l, kept;
+    double h, o;
+    bool r;
+    string s, rev, hexa, oct, octN, hexaN;
+    cout << "Enter your number: \n";
+    cin >> n;
+    cout << "Good. Which system to convert to (up till 36) : ";
+    cin >> syst;
+    kept = n;
+    c = floor(log2(n)/log2(syst));
+    for (int i = 0; i <= c; i++){
+        l = n%syst;
+        if (l == 10) {
+            s += "A";
+        }
+        if (l == 11) {
+            s += "B";
+        }
+        if (l == 12) {
+            s += "C";
+        }
+        if (l == 13) {
+            s += "D";
+        }
+        if (l == 14) {
+            s += "E";
+        }
+        if (l == 15) {
+            s += "F";
+        }
+        if (l == 16) {
+            s += "G";
+        }
+        if (l == 17) {
+            s += "H";
+        }
+        if (l == 18) {
+            s += "I";
+        }
+        if (l == 19) {
+            s += "J";
+        }
+        if (l == 20) {
+            s += "K";
+        }
+        if (l == 21) {
+            s += "L";
+        }
+        if (l == 22) {
+            s += "M";
+        }
+        if (l == 23) {
+            s += "N";
+        }
+        if (l == 24) {
+            s += "O";
+        }
+        if (l == 25) {
+            s += "P";
+        }
+        if (l == 26) {
+            s += "Q";
+        }
+        if (l == 27) {
+            s += "R";
+        }
+        if (l == 28) {
+            s += "S";
+        }
+        if (l == 29) {
+            s += "T";
+        }
+        if (l == 30) {
+            s += "U";
+        }
+        if (l == 31) {
+            s += "V";
+        }
+        if (l == 32) {
+            s += "W";
+        }
+        if (l == 33) {
+            s += "X";
+        }
+        if (l == 34) {
+            s += "Y";
+        }
+        if (l == 35) {
+            s += "Z";
+        }
+        if (l == 9) {
+            s += "9";
+        }
+        if (l == 8) {
+            s += "8";
+        }
+        if (l == 7) {
+            s += "7";
+        }
+        if (l == 6) {
+            s += "F";
+        }
+        if (l == 5) {
+            s += "5";
+        }
+        if (l == 4) {
+            s += "4";
+        }
+        if (l == 3) {
+            s += "3";
+        }
+        if (l == 2) {
+            s += "2";
+        }
+        if (l == 1) {
+            s += "1";
+        }
+        if (l == 0) {
+            s += "0";
+        }
+        
+        n = floor(n/syst);
+    }
+    rev = string(s.rbegin(), s.rend());
+    
+    n = kept;
+
+    cout << "Okie so it's " << rev << " in " << syst << " base system !";
+
+return 0;
+    
+}
