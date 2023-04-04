@@ -1,0 +1,82 @@
+ #include <iostream>
+ #include <cmath>
+ #include <string>
+ using namespace std;
+
+ int main()
+ {
+     int n, c, t, h, o, l;
+     bool r;
+     string s, rev, hexa, octel;
+     cout << "Enter your number: \n";
+     cin >> n;
+     c = floor(log2(n));
+     for (int i = 0; i <= c; i++){
+        r = n%2;
+        if (r == 1) {
+            s += "1";
+        }
+        else {s += "0";}
+        n = floor(n/2);
+     }
+     rev = string(s.rbegin(), s.rend());
+
+     h = ceil(length(rev)/4);
+     for (int i = 0; i <= h; i++){
+        l = n%16;
+        if (l == 10) {
+            hexa += "A";
+        }
+        if (l == 11) {
+            hexa += "B";
+        }
+        if (l == 12) {
+            hexa += "C";
+        }
+        if (l == 13) {
+            hexa += "D";
+        }
+        if (l == 14) {
+            hexa += "E";
+        }
+        if (l == 15) {
+            hexa += "F";
+        }
+        else {hexa += string(l);}
+        n = floor(n/16);
+     }
+     hexa = string(hexa.rbegin(), hexa.rend());
+
+     o = ceil(length(rev)/3);
+     for (int i = 0; i <= o; i++){
+        l = n%8;
+        octel += string(l)
+        n = floor(n/8);
+     }
+     octel = string(octel.rbegin(), octel.rend());
+
+
+
+     /* Long code for machine, yet good and logical for humans 
+
+     hexa = s + (h - length(rev))*"0";
+     hexa = string(hexa.rbegin(), hexa.rend())
+
+     octel = s + (o - length(rev))*"0";
+     octel = string(octel.rbegin(), octel.rend())
+
+     for (int i = 0; i < length(octel); i++) {
+         if 
+
+     }*/
+     cout << "What system do you convert it to ?) \n Enter a number \n 0 if octel \n 1 if hexdecimal \n 2 if binary \n 3 if all \n";
+     cin >> t;
+     if (t == 3) {cout << "Binary : " << rev << "\n" << "Hexadecimal : " << hexa << "\n" << "Octel : " << octel ;}
+     if (t == 2) {cout << "This is your binary number: " << rev;}
+     if (t == 1) {cout << "This is your hexadecimal number: " << rev;}
+     if (t == 0) {cout << "This is your octel number: " << rev;}
+     else {cout << "Wrong input :( only, 0, 1, 2, 3";}
+
+
+     return 0;
+ }
