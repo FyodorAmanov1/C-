@@ -25,9 +25,9 @@ int main()
     
     n = kept;
 
-    h = ceil(log2(n)/4);
-    cout << h;
-    for (int i = 0; i < h; i++){
+    h = floor(log2(n)/4);
+    //cout << h;
+    for (int i = 0; i <= h; i++){
         l = n%16;
         if (l == 10) {
             hexaN += "A";
@@ -47,9 +47,39 @@ int main()
         if (l == 15) {
             hexaN += "F";
         }
-        else { hexaN += to_string(l);}
+        if (l == 9) {
+            hexaN += "9";
+        }
+        if (l == 8) {
+            hexaN += "8";
+        }
+        if (l == 7) {
+            hexaN += "7";
+        }
+        if (l == 6) {
+            hexaN += "F";
+        }
+        if (l == 5) {
+            hexaN += "5";
+        }
+        if (l == 4) {
+            hexaN += "4";
+        }
+        if (l == 3) {
+            hexaN += "3";
+        }
+        if (l == 2) {
+            hexaN += "2";
+        }
+        if (l == 1) {
+            hexaN += "F";
+        }
+        if (l == 15) {
+            hexaN += "0";
+        }
         n = floor(n/16);
     }
+    //cout << hexaN;
     hexa = string(hexaN.rbegin(), hexaN.rend());
     
     n = kept;
