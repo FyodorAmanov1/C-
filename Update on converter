@@ -1,82 +1,89 @@
- #include <iostream>
- #include <cmath>
- #include <string>
- using namespace std;
+#include <iostream>
+#include <cmath>
+#include <string>
+using namespace std;
 
- int main()
- {
-     int n, c, t, h, o, l;
-     bool r;
-     string s, rev, hexa, octel;
-     cout << "Enter your number: \n";
-     cin >> n;
-     c = floor(log2(n));
-     for (int i = 0; i <= c; i++){
+int main()
+{
+    int n, c, t, l, kept;
+    double h, o;
+    bool r;
+    string s, rev, hexa, oct, octN, hexaN;
+    cout << "Enter your number: \n";
+    cin >> n;
+    kept = n;
+    c = floor(log2(n));
+    for (int i = 0; i <= c; i++){
         r = n%2;
         if (r == 1) {
             s += "1";
         }
         else {s += "0";}
         n = floor(n/2);
-     }
-     rev = string(s.rbegin(), s.rend());
+    }
+    rev = string(s.rbegin(), s.rend());
+    
+    n = kept;
 
-     h = ceil(length(rev)/4);
-     for (int i = 0; i <= h; i++){
+    h = ceil(log2(n)/4);
+    cout << h;
+    for (int i = 0; i < h; i++){
         l = n%16;
         if (l == 10) {
-            hexa += "A";
+            hexaN += "A";
         }
         if (l == 11) {
-            hexa += "B";
+            hexaN += "B";
         }
         if (l == 12) {
-            hexa += "C";
+            hexaN += "C";
         }
         if (l == 13) {
-            hexa += "D";
+            hexaN += "D";
         }
         if (l == 14) {
-            hexa += "E";
+            hexaN += "E";
         }
         if (l == 15) {
-            hexa += "F";
+            hexaN += "F";
         }
-        else {hexa += string(l);}
+        else { hexaN += to_string(l);}
         n = floor(n/16);
-     }
-     hexa = string(hexa.rbegin(), hexa.rend());
+    }
+    hexa = string(hexaN.rbegin(), hexaN.rend());
+    
+    n = kept;
 
-     o = ceil(length(rev)/3);
-     for (int i = 0; i <= o; i++){
+    o = ceil(log2(n)/3);
+    cout << o;
+    for (int i = 0; i < o; i++){
         l = n%8;
-        octel += string(l)
+        octN += to_string(l);
         n = floor(n/8);
-     }
-     octel = string(octel.rbegin(), octel.rend());
+    }
+    oct = string(octN.rbegin(), octN.rend());
 
 
 
-     /* Long code for machine, yet good and logical for humans 
+    /* Long code for machine, yet good and logical for humans 
 
-     hexa = s + (h - length(rev))*"0";
-     hexa = string(hexa.rbegin(), hexa.rend())
+    hexa = s + (h - length(rev))*"0";
+    hexa = string(hexa.rbegin(), hexa.rend())
 
-     octel = s + (o - length(rev))*"0";
-     octel = string(octel.rbegin(), octel.rend())
+    octel = s + (o - length(rev))*"0";
+    octel = string(octel.rbegin(), octel.rend())
 
-     for (int i = 0; i < length(octel); i++) {
+    for (int i = 0; i < length(octel); i++) {
          if 
 
-     }*/
-     cout << "What system do you convert it to ?) \n Enter a number \n 0 if octel \n 1 if hexdecimal \n 2 if binary \n 3 if all \n";
-     cin >> t;
-     if (t == 3) {cout << "Binary : " << rev << "\n" << "Hexadecimal : " << hexa << "\n" << "Octel : " << octel ;}
-     if (t == 2) {cout << "This is your binary number: " << rev;}
-     if (t == 1) {cout << "This is your hexadecimal number: " << rev;}
-     if (t == 0) {cout << "This is your octel number: " << rev;}
-     else {cout << "Wrong input :( only, 0, 1, 2, 3";}
+    }*/
+cout << "What system do you convert it to ?) \n Enter a number \n 0 if octel \n 1 if hexdecimal \n 2 if binary \n 3 if all \n";
+cin >> t;
+if (t == 3) {cout << "Binary : " << rev << "\n" << "Hexadecimal : " << hexa << "\n" << "Octel : " << oct ;}
+if (t == 2) {cout << "This is your binary number: " << rev;}
+if (t == 1) {cout << "This is your hexadecimal number: " << hexa;}
+if (t == 0) {cout << "This is your octel number: " << oct;}
 
-
-     return 0;
- }
+return 0;
+    
+}
