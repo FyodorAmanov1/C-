@@ -55,7 +55,6 @@ int main()
     n = kept;
 
     o = ceil(log2(n)/3);
-    cout << o;
     for (int i = 0; i < o; i++){
         l = n%8;
         octN += to_string(l);
