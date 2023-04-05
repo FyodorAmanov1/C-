@@ -86,3 +86,137 @@ else{
 }
     return 0;
 }
+
+
+#include <iostream>
+#include <cmath>
+using namespace std;
+
+int main()
+{
+    double x, y, z, x1, x2, sqD;
+    cin >> x;
+    cin >> y;
+    cin >> z;
+
+sqD = sqrt(pow(y,2) - 4 * x * z); 
+x1 = (-y + sqD)/(2*x);
+x2 = (-y - sqD)/(2*x);
+if (x1 != x2) {
+    cout << "x1 = " << x1 << " x2 = " << x2;
+}
+if (x1 == x2) {
+    cout << "x1 = x2 = " << x2;
+}
+
+    return 0;
+}
+
+#include <iostream>
+#include <cmath>
+using namespace std;
+
+int main()
+{
+    double x, y, z;
+    cin >> x;
+    cin >> y;
+    cin >> z;
+
+if (x + y > z) {
+    if (y + z > x) {
+       if (x + z > x){
+           cout << "The triangle is valid";
+       } 
+    }
+}
+else {cout << "The triangle is not valid";}
+    return 0;
+}
+
+#include <iostream>
+#include <cmath>
+using namespace std;
+
+int main()
+{
+    char x;
+    cin >> x;
+
+if (isupper(x)) {
+cout << "Well it's upper case!";
+}
+if (islower(x)){
+cout << "Well it's lower case!";
+}
+if (isupper(x) != 1 and islower(x) != 1){
+cout << "Ohh that's a character!";
+}
+    return 0;
+}
+
+#include <iostream>
+#include <cmath>
+#include <string>
+using namespace std;
+
+int main()
+{
+    string x;
+    cin >> x;
+
+if ( x == "Johnson" or x =="Smith" or x =="Anderson" or x =="Bennett" or x =="Jackson") {
+    cout << "You have access";
+}
+else {
+    cout << "You don't have access";
+}
+    return 0;
+}
+
+
+
+
+#include <iostream>
+#include <cmath>
+#include <string>
+using namespace std;
+
+int main()
+{
+    int x, y, z;
+    string check;
+    cin >> x;
+    cin >> y;
+    cin >> z;
+    check = to_string(x) + to_string(y) + to_string(z);
+    
+switch(stoi(check)){
+    case 100:
+    cout << "You are Jack !";
+    break;
+    case 101:
+    cout << "You are Leonard !";
+    break;
+    
+    case 110:
+    cout << "You are Joanne !";
+    break;
+    
+    case 111:
+    cout << "You are Michael !";
+    break;
+    
+    case 10:
+    cout << "You are Pamela !";
+    break;
+    
+    case 0:
+    cout << "You are George !";
+    break;
+    default:
+    cout << "Oh nice to mmet you! I see you for the first time :)";
+}
+
+    return 0;
+}
