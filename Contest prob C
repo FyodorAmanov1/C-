@@ -10,9 +10,12 @@ int main()
    string reply[t];
    for (int i = 0; i < t; ++i){
         cin >> n;
-        int f21 = int(floor(n/2021));
-        int f20 = int(floor(n/2020));
-        if (n%2020%2021 == 0 or n%2021%2020 == 0 or n%2020 == 0 or n%2021 == 0 or (n - (f20 - 1)*2020)%2021 == 0 or (n - f21*2021)%2020 == 0) {
+        int f21 = int(floor(n/2021)) - 1;
+        int f20 = int(floor(n/2020)) - 1;
+        if (f20 < 0)
+            f20 = 0;
+            
+        if (n%2020%2021 == 0 or n%2021%2020 == 0 or n%2020 == 0 or n%2021 == 0 or (n - f20*2020)%2021 == 0 or (n - f21*2021)%2020 == 0) {
             reply[i] = "Yes";
         }
         else
@@ -24,3 +27,5 @@ int main()
    }
     return 0;
 }
+
+//Some kind of bug, ask Mr Asadullo
