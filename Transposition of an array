@@ -1,0 +1,37 @@
+#include <iostream>
+#include <string>
+using namespace std;
+
+void copyArr(int arr[], int b[]){
+    int s = sizeof(arr);
+    int t;
+    if ( s%2 == 0)
+        t = s/2;
+    if (s%2 == 1)
+        t = s/2 + 1;
+    for(int i = 0; i < t; ++i){
+        b[i] = arr[s - i];
+        b[s - i] = arr[i];
+        cout << b[i];
+        cout << b[s - i];
+    }
+
+}
+
+int main() {
+    int s;
+    cout << "How long is your array ?" << endl;
+    cin >> s;
+    int a[s];
+    for (int i = 0; i < s; i++) {
+        cin >> a[i];
+    }
+    int c[5] = {};
+    copyArr(a, c);
+    for (int i = 0; i < s; i++){
+        cout << c[i] << endl;
+    }
+    return 0;
+}
+
+//((s%2 == 0)? s/2: s/2 + 1)
