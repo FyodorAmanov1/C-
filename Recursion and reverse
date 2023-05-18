@@ -1,0 +1,23 @@
+#include <iostream>
+
+using namespace std;
+
+void revrec(int a[], int s){
+    int static i = 0;
+    cout << a[s-i-1] << endl;
+    i++;
+    if (i != s)
+        revrec(a, s);
+    
+}
+
+int main() {
+    int s;
+    cout << "How large is your array ?";
+    cin >> s;
+    int a[s];
+    for (int i = 0; i < s; ++i){
+        cin >> a[i];
+    }
+    revrec(a, s);
+}
